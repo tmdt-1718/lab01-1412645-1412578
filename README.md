@@ -4,7 +4,7 @@
 
 Thành viên:
 * [x] **1412578** Trần Quang Trí (1412578)
-* [ ] **MSSV2** Tên sinh viên 2 (tên tài khoản github)
+* [x] **1412645** Lê Hoàng Vũ (1412645)
 
 URL: **URL hosting của bài tập**
 
