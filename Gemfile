@@ -14,7 +14,6 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 # Use bootstrap + jquery
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'jquery-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -29,7 +28,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-gem 'bootstrap', '~> 4.0.0.beta'
+#gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

@@ -20,7 +20,7 @@
 	      </button>
 	      <img class="navbar-brand" src="<%= asset_path('logo.jpg') %>"></img>
 	    </div>
-	    <div class="collapse navbar-collapse" id="myNavbar">
+	    <div class="navbar-collapse-custom collapse" id="myNavbar">
 	      <ul class="nav navbar-nav">
 	        <li class="<%= isMenuActive('/home') %>"><%= link_to 'Home', 'home' %></li>
 	        <li class="<%= isMenuActive('/albums')  %>"><%= link_to 'Albums', 'albums' %></li>
@@ -41,13 +41,13 @@
 		</ol>
 		<div class="row">
 			<div class="col-md-3">
-				<div id="listgroup">
+				<div id="listgroup" class="lmenu-btn-show">
 					More
 					<button class="navbar-toggler" data-toggle="collapse" data-target="#myAddition">
 		  				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 		  			</button>
 				</div>
-				<div class="collapse navbar-collapse" id="myAddition">
+				<div class="lmenu collapse navbar-collapse" id="myAddition">
 					<div class="list-group">
 					    <a class="list-group-item" href="#">
 					    	<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;

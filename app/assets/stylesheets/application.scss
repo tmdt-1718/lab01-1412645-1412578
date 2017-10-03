@@ -1,6 +1,5 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "home";
 
 .navbar-default-custom{
 	background-color: white;
@@ -30,4 +29,52 @@ footer .container{
 }
 footer .container p{
 	margin-bottom: 0px;
+}
+@media (min-width: 768px){
+	.lmenu-btn-show{
+		display: none;
+	}
+}
+.lmenu{
+	padding-left: 0px;
+}
+.lmenu-btn-show{
+	padding-left: 0px;
+}
+.navbar-toggle-custom{
+	position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+@media (min-width: 992px){
+	.navbar-collapse-custom {
+	    display: block !important;
+	    height: auto !important;
+	    padding-bottom: 0;
+	    overflow: visible !important;
+	}
+}
+#listgroup {
+	margin-bottom: 5px;
+}
+
+.navbar-collapse .list-group li:hover {
+	background-color: #EEEEEE;
+	color: black;
+}
+
+.navbar-collapse .list-group li a:hover {
+	color: black;
+}
+
+.navbar-collapse .list-group li a {
+	text-decoration: none;
+	color: gray;
 }
