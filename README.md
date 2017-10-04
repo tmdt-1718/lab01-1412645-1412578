@@ -48,8 +48,10 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 
 ## Demo
 
+Link ảnh TIFF demo ứng dụng:
 Link ảnh GIF demo ứng dụng:
 Link ảnh JPG demo ứng dụng:
+Link ảnh PSD demo ứng dụng:
 
 ![Video Walkthrough](demo.gif)
 
