@@ -4413,3 +4413,347 @@ Processing by AboutController#index as HTML
 Completed 200 OK in 387ms (Views: 340.7ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1932410105524239390)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1932410105524239390)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/about" for 172.18.0.1 at 2017-10-04 12:06:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (6828.4ms)
+Completed 200 OK in 7968ms (Views: 7536.8ms)
+
+
+Started GET "/blog" for 172.18.0.1 at 2017-10-04 12:06:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogController#index as HTML
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 453ms (Views: 405.7ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 12:06:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 1017ms (Views: 923.5ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:25:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 3192ms (Views: 3170.3ms)
+
+
+Started GET "/blog" for 172.18.0.1 at 2017-10-04 14:25:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogController#index as HTML
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 809ms (Views: 609.6ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:25:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 566ms (Views: 531.6ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:29:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 533ms (Views: 516.7ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:30:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 228ms (Views: 211.3ms)
+
+
+Started GET "/blog" for 172.18.0.1 at 2017-10-04 14:30:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogController#index as HTML
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 164ms (Views: 152.8ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:31:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 281ms (Views: 260.1ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:33:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 228ms (Views: 214.7ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:33:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 221ms (Views: 205.6ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:33:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 246ms (Views: 226.9ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:33:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 219ms (Views: 205.9ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:34:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 250ms (Views: 234.8ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:35:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 239ms (Views: 229.2ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:36:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 5194ms (Views: 5175.4ms)
+
+
+Started GET "/home" for 172.18.0.1 at 2017-10-04 14:37:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 199ms (Views: 184.9ms)
+
+
+Started GET "/albums" for 172.18.0.1 at 2017-10-04 14:38:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  Rendered albums/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 188ms (Views: 174.1ms)
+
+
+Started GET "/blog" for 172.18.0.1 at 2017-10-04 14:38:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogController#index as HTML
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 209ms (Views: 183.5ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:38:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 215ms (Views: 199.0ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:39:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 2219ms (Views: 2205.4ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:39:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 184ms (Views: 171.3ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:40:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 212ms (Views: 198.2ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:40:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 179ms (Views: 167.7ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:45:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 2235ms (Views: 2223.0ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:45:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 2334ms (Views: 2321.8ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:46:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 2150ms (Views: 2135.2ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:47:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 2113ms (Views: 2101.4ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:48:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 2186ms (Views: 2177.7ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:49:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 2371ms (Views: 2359.0ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:49:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 2406ms (Views: 2394.3ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 14:49:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 2386ms (Views: 2370.8ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 15:16:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 2173ms (Views: 2164.8ms)
+
+
+Started GET "/blog" for 172.18.0.1 at 2017-10-04 15:38:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogController#index as HTML
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 246ms (Views: 231.4ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 15:40:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 245ms (Views: 224.1ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 15:42:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 2026ms (Views: 2014.5ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 15:42:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 2034ms (Views: 2017.1ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 15:43:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 2131ms (Views: 2120.9ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 15:44:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 208ms (Views: 193.3ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 15:45:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 219ms (Views: 207.2ms)
+
+
+Started GET "/about" for 172.18.0.1 at 2017-10-04 15:46:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 2139ms (Views: 2128.0ms)
+
+
