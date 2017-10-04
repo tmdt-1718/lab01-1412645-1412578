@@ -51,7 +51,8 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 Link ảnh TIFF demo ứng dụng:
 Link ảnh GIF demo ứng dụng:
 Link ảnh JPG demo ứng dụng:
-Link ảnh PSD demo ứng dụng:
+Link ảnh PSD demo ứng dụng: 
+Link ảnh CCC demo ứng dụng: 
 
 ![Video Walkthrough](demo.gif)
 
