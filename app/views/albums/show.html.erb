@@ -1,0 +1,8 @@
+<h2>Người đăng Album: <%= @album.author %></h2>
+<img src="<%= @album.cover_url %>">
+<% @album.pictures.each do |picture| %>
+	<h3>Người đăng: <%= picture.uploader %> Lượt xem: <%= picture.view_count %></h3>
+	<a href="<%= picture_path(picture.id) %>">
+		<img src="<%= picture.picture_url %>">
+	</a>
+<% end %>

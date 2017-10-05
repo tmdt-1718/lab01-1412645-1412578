@@ -3,7 +3,12 @@
 	<% @albums.each do |album| %>
 	<div class="album">
 		<img src="<%= album.cover_url %>" alt="">
-		<div class="title"><%= album.author %></div>
+		<div class="title"><span><%= album.author %></span></div>
+		<a href="<%= album_path(album.id) %>"></a>
+		<div class="view-count">
+			<i class="fa fa-eye fa-1" aria-hidden="true"></i>
+			<span><%= album.view_count %></span>
+		</div>
 	</div>
 	<% end %>
 </div>

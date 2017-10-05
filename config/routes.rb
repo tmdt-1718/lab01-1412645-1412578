@@ -3,9 +3,12 @@ Rails.application.routes.draw do
 
   get 'blog' => 'blog#index'
 
-  get 'albums' => 'albums#index'
-
+  resources :albums
+  resources :picture
+  
   get 'home' => 'home#index'
+
+
   root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

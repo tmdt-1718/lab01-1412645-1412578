@@ -1,24 +1,28 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 @import "albums";
 
 .container-content{
 	padding-bottom: 80px;
 }
 .navbar-default-custom{
-	background-color: white;
-	border-color: white;
+	background-color: rgb(248, 248, 248);
+	border-color: rgb(248, 248, 248);
+	border-radius: 0px;
+	margin-bottom: 10px;
 }
 .navbar-default-custom  .navbar-nav > .active > a{
-	background-color: white !important;
-	color: black;
+	background-color: rgb(248, 248, 248) !important;
+	color: #ff477c !important;
 	font-weight: bold;
 }
 .navbar-default-custom  .navbar-nav a{
 	transition: 0.1s border-bottom;
+	border-bottom: solid 1px rgb(248, 248, 248);
 }
 .navbar-default-custom  .navbar-nav a:hover{
-	border-bottom: solid 1px black;
+	border-bottom: solid 1px #ff477c;
 }
 footer{
 	position: fixed;

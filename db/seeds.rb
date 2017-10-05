@@ -5,9 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Picture.delete_all
 Album.delete_all
-Album.create([{cover_url: "http://images5.fanpop.com/image/photos/28300000/Black-Cat-Wallpaper-black-28305470-500-375.jpg", author: "Trần Quang Trí"},
-	{cover_url: "https://www.petfinder.com/wp-content/uploads/2012/11/152177319-declawing-cats-632x475-e1354303246526-632x353.jpg", author: "Lê Hoàng Vũ"},
-	{cover_url: "http://media1.santabanta.com/full1/Animals/Cats/cats-85a.jpg", author: "Trần Minh Tiến"},
-	{cover_url: "http://www.catster.com/wp-content/uploads/2016/05/cats-politics-TN.jpg", author: "Trần Hông Thuận"},
-	{cover_url: "http://media1.santabanta.com/full1/Animals/Cats/cats-149a.jpg", author: "Mericurus"}])
+
+
+album = Album.create([
+	{cover_url: "https://i.imgur.com/FfttpII.jpg", author: "Trần Quang Trí", view_count: 0},
+	{cover_url: "https://i.imgur.com/Hz466X3.jpg", author: "Lê Hoàng Vũ", view_count: 0},
+	{cover_url: "https://i.imgur.com/3JNRlhF.jpg", author: "Trần Minh Tiến", view_count: 0},
+	{cover_url: "https://i.imgur.com/ij16QvY.jpg", author: "Trần Hông Thuận", view_count: 0},
+	{cover_url: "https://i.imgur.com/hztmlh2.jpg", author: "Mericurus", view_count: 0}])
+Picture.create([
+	{picture_url:"https://i.imgur.com/qYsZJI0m.jpg", uploader: "Trí", view_count: 0, album: album[0]},
+	{picture_url:"https://i.imgur.com/z0IAXyhm.jpg", uploader: "Trí", view_count: 0, album: album[0]},
+	{picture_url:"https://i.imgur.com/W6Z6I2wm.jpg", uploader: "Trí", view_count: 0, album: album[0]},
+	{picture_url:"https://i.imgur.com/foguNdMm.jpg", uploader: "Trí", view_count: 0, album: album[0]},
+	{picture_url:"https://i.imgur.com/WQObSf5m.jpg", uploader: "Vũ", view_count: 0, album: album[1]}])
