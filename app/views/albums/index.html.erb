@@ -1,2 +1,9 @@
-<h1>Albums#index</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
+<!-- <h2><%= @albums.inspect %></h2> -->
+<div class="albums-container">
+	<% @albums.each do |album| %>
+	<div class="album">
+		<img src="<%= album.cover_url %>" alt="">
+		<div class="title"><%= album.author %></div>
+	</div>
+	<% end %>
+</div>
