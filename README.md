@@ -6,7 +6,7 @@ Thành viên:
 * [x] **1412578** Trần Quang Trí (1412578)
 * [x] **1412645** Lê Hoàng Vũ (1412645)
 
-URL: **URL hosting của bài tập**
+URL: **lab01-1412578-1412645.herokuapp.com**
 
 ## Yêu cầu
 
