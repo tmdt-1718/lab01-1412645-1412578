@@ -13,7 +13,8 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use bootstrap + jquery
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.0.0.alpha3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -28,8 +29,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-#gem 'bootstrap', '~> 4.0.0.beta'
-gem 'jquery-rails'
 #font awesome
 gem "font-awesome-rails"
 

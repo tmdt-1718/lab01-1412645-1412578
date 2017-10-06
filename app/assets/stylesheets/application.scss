@@ -1,9 +1,11 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 @import "albums";
 @import "about";
 
+.logo{
+	width: 60px;
+}
 .container-content{
 	padding-bottom: 80px;
 }
@@ -63,14 +65,6 @@ footer .container p{
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-}
-@media (min-width: 992px){
-	.navbar-collapse-custom {
-	    display: block !important;
-	    height: auto !important;
-	    padding-bottom: 0;
-	    overflow: visible !important;
-	}
 }
 #listgroup {
 	margin-bottom: 5px;
