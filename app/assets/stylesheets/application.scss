@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "albums";
+@import "about";
 
 .container-content{
 	padding-bottom: 80px;
@@ -24,6 +25,7 @@
 .navbar-default-custom  .navbar-nav a:hover{
 	border-bottom: solid 1px #ff477c;
 }
+
 footer{
 	position: fixed;
 	bottom: 0;
@@ -31,6 +33,7 @@ footer{
 	width: 100%;
 	background-color: #f5f5f5;
 	color: #868e96;
+	margin-top: 20px;
 }
 footer .container{
 	line-height: 60px;
