@@ -30,6 +30,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 #gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails'
+#font awesome
+gem "font-awesome-rails"
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -37,6 +40,7 @@ gem 'jquery-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
 
 
 group :development, :test do
