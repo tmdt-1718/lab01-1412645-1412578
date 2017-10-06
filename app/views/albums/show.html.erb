@@ -1,8 +1,17 @@
-<h2>Người đăng Album: <%= @album.author %></h2>
-<img src="<%= @album.cover_url %>">
+<div class="album-full-cover img-shadow">
+	<img src="<%= @album.cover_url %>">
+	<h2><%= @album.author %></h2>
+</div>
+<div class="albums-container">
 <% @album.pictures.each do |picture| %>
-	<h3>Người đăng: <%= picture.uploader %> Lượt xem: <%= picture.view_count %></h3>
-	<a href="<%= picture_path(picture.id) %>">
-		<img src="<%= picture.picture_url %>">
-	</a>
+	<div class="album img-shadow">
+		<img src="<%= picture.picture_url %>" alt="">
+		<div class="title"><span><%= picture.uploader %></span></div>
+		<a href="<%= picture_path(picture.id) %>"></a>
+		<div class="view-count">
+			<i class="fa fa-eye fa-1" aria-hidden="true"></i>
+			<span><%= picture.view_count %></span>
+		</div>
+	</div>
 <% end %>
+</div>

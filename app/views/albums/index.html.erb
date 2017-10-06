@@ -1,7 +1,7 @@
 <!-- <h2><%= @albums.inspect %></h2> -->
 <div class="albums-container">
 	<% @albums.each do |album| %>
-	<div class="album">
+	<div class="album img-shadow">
 		<img src="<%= album.cover_url %>" alt="">
 		<div class="title"><span><%= album.author %></span></div>
 		<a href="<%= album_path(album.id) %>"></a>
