@@ -8,7 +8,7 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 	</head>
 	<body>
-		<nav class="navbar navbar-light bg-light navbar-default-custom navbar-expand-lg">
+		<nav class="navbar navbar-dark bg-dark navbar-default-custom navbar-expand-lg">
 			<div class="container">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -22,28 +22,52 @@
 					<li class="nav-item <%= isMenuActive('/about')  %>"><a class="nav-link" href="<%= about_path %>">About</a></li>
 				</ul>
 			</div>
-			<form class="form-inline my-2 my-lg-0">
-		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Đăng ký</button>
-		    </form>
+			<ul class="navbar-nav ml-auto">
+			  <button class="btn btn-outline-primary mr-2">Đăng ký</button>
+		      <button class="btn btn-outline-primary">Đăng nhập</button>
+		    </ul>
 		</div>
 		</nav>
-		<div class="container container-content">
-			<ol class="breadcrumb">
-				<% @breadcums.each_with_index do |item, index| %>
-				<li class="breadcrumb-item <%= index==@breadcums.length-1 ? "" : "active" %>">
-					<% if index==@breadcums.length-1 %>
-					<%= item[:title] %>
-					<% else %>
-					<a href="<%= item[:url] %>"><%= item[:title] %></a>
+		<div class="breadcrum-panel">
+			<div class="container">
+				<ol class="breadcrumb breadcrumb-custom">
+					<% @breadcums.each_with_index do |item, index| %>
+					<li class="breadcrumb-item breadcrumb-item-custom <%= index==@breadcums.length-1 ? "" : "active" %>">
+						<% if index==@breadcums.length-1 %>
+						<%= item[:title] %>
+						<% else %>
+						<a href="<%= item[:url] %>"><%= item[:title] %></a>
+						<% end %>
+					</li>
 					<% end %>
-				</li>
-				<% end %>
-			</ol>
+				</ol>
+			</div>
+		</div>
+		<div class="container container-content">
 			<div class="row">
-				<div class="col-sm-3">
-					
+				<div class="col-md-3">
+					<div id="listgroup" class="lmenu-btn-show">
+						More
+						<button class="navbar-toggler" data-toggle="collapse" data-target="#myAddition">
+						<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+						</button>
+					</div>
+					<div class="lmenu collapse navbar-collapse" id="myAddition">
+						<div class="list-group">
+							<a class="list-group-item" href="#">
+								<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;
+								New feed
+							</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Messenger</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>&nbsp;Event</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Group</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-king" aria-hidden="true"></span>&nbsp;Game</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;List friend</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;Calendar</a>
+						</div>
+					</div>
 				</div>
-				<div class="col-sm-9">
+				<div class="col-md-9">
 					<%= yield %>
 				</div>
 			</div>
