@@ -9,12 +9,28 @@
 	position: relative;
 	display: inline-block;
 	height: 200px;
+	vertical-align: top;
 	font-size: 14px;
-	width: 25%;
+	width: 20%;
 	padding: 0 5px 5px 0;
 }
-.album-wrapper:nth-child(4n){
-	padding-right: 0px;
+.album-wrapper:nth-child(5n){
+		padding-right: 0px;
+}
+@media (max-width: 1199px){
+	.album-wrapper{ 
+		width: 25%;
+	}
+	.album-wrapper:nth-child(4n){
+		padding-right: 0px;
+	}
+}
+@media (max-width: 767px){
+	.album-wrapper{
+		padding: 0;
+		width: 100%;
+		height: auto;
+	}
 }
 .album{
 	position: relative;

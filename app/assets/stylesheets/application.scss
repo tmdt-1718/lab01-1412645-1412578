@@ -2,6 +2,7 @@
 @import "font-awesome";
 @import "albums";
 @import "about";
+@import "home";
 
 $primary_bg_color: #45445a;
 $primary_text_color: white;
@@ -45,6 +46,25 @@ $content_bg_color: white;
 }
 .breadcrum-panel{
 	background-color: $breacrum_bg_color;
+}
+
+.col-leftmenu{
+	padding-right: 0;
+	padding-left: 0;
+	.list-group-item {
+		border: 0;
+		background-color: $primary_text_color;
+		color: $primary_bg_color;
+	}
+	.list-group-item:hover{
+		background-color: #f4f4f4;
+		border-right: solid 3px $primary_bg_color;
+		border-radius: 2px;
+		margin-right: 2px;
+	}
+}
+.col-content{
+	padding-left: 0;
 }
 footer{
 	position: fixed;
