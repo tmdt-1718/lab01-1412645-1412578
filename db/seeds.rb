@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Blog.delete_all
+
+(1..2).each do |number|
+	Blog.create!(user_id: "#{number}", image_id: "#{number}", view_number: "#{number}", text_content: "123")
+end

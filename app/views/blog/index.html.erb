@@ -1,2 +1,46 @@
-<h1>Blog#index</h1>
-<p>Find me in app/views/blog/index.html.erb</p>
+
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="postblog">
+			<div id="exit"></div>
+			<%= form_with scope: :blog, local: true,url: blog_index_path, method: :post do |form| %>
+			<div class="borderblog">
+				<div class="avatar">
+					<img src="<%= asset_path('1412645.jpg') %>" alt="avatar">
+				</div>
+				<%= form.text_area :text_content, placeholder: "What's on your mind?", style: "overflow:hidden", id: "textpost", onclick: "exitpost()", onkeyup: "textAreaAdjust(this)" %>
+			</div>
+			<div class="buttonpost">
+				<button type="submit" class="btn btn-primary">Post</button>
+			</div>
+			<% end %>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<% @blogs.each do |blog| %>
+			<div class="newpost">
+				<div class="avatarpost">
+					<img src="<%= asset_path('1412645.jpg') %>" alt="avatar's poster">
+				</div>
+				<div class="namepost">Tên tài khoản</div>
+				<div class="content_post more" id="new">
+					<%=blog.text_content%>
+				</div>
+				<div class="view">
+					Seen by <%=blog.view_number%>
+				</div>
+				<a href="<%= blog_path(blog.id)%>">See more</a>
+			</div>
+		<% end %>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+
+
+

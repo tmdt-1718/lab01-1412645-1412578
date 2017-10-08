@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   get 'about' => 'about#index'
 
-  get 'blog' => 'blog#index'
-
+  resources :blog, only: [:index, :show]
   get 'albums' => 'albums#index'
 
   get 'home' => 'home#index'

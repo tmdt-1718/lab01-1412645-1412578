@@ -1,0 +1,17 @@
+
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="newpost">
+			<div class="avatarpost">
+				<img src="<%= asset_path('1412645.jpg') %>" alt="avatar's poster">
+			</div>
+			<div class="namepost">Tên tài khoản</div>
+			<div class="content_post" id="new">
+				<%=@blog.text_content%>
+			</div>
+			<div class="view_detail">Seen by <%=@blog.view_number%></div>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+</div>
