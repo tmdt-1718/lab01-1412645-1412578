@@ -1,0 +1,13 @@
+<% if !flash[:error].nil? %>
+<div class="alert alert-danger" role="alert">
+  <span><%= flash[:error] %></span>
+</div>
+<% end %>
+<h1>Login</h1>
+<%= form_with scope: :session, url: session_index_path, local: true, method: :post do |form| %>
+	<label>Tên đăng nhập</label>
+	<%= form.text_field :username %>
+	<label>Mật khẩu</label>
+	<%= form.password_field :password %>
+	<button type="submit" class="btn btn-primary">Đăng nhập</button>
+<% end %>

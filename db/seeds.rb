@@ -15,6 +15,8 @@ album = Album.create([
 	{cover_url: "https://i.imgur.com/3JNRlhF.jpg", author: "Trần Minh Tiến", view_count: 0},
 	{cover_url: "https://i.imgur.com/ij16QvY.jpg", author: "Trần Hông Thuận", view_count: 0},
 	{cover_url: "https://i.imgur.com/hztmlh2.jpg", author: "Mericurus", view_count: 0}])
+User.create!([
+	name: "Trần Quang Trí", username: "tranquangtri", password_hash: "123456"])
 Picture.create([
 	{picture_url:"https://i.imgur.com/qYsZJI0.jpg", uploader: "Trí", view_count: 0, album: album[0]},
 	{picture_url:"https://i.imgur.com/z0IAXyh.jpg", uploader: "Trí", view_count: 0, album: album[0]},

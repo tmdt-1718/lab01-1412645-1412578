@@ -10,23 +10,32 @@
 	<body>
 		<nav class="navbar navbar-dark bg-dark navbar-default-custom navbar-expand-lg">
 			<div class="container">
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
-			<img class="navbar-brand logo" src="<%= asset_path('logo.png') %>">
-			<div class="navbar-collapse collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item <%= isMenuActive('/home') %>"><a class="nav-link" href="<%= home_path %>">Home</a></li>
-					<li class="nav-item <%= isMenuActive('/albums')  %>"><a class="nav-link" href="<%= albums_path %>">Albums</a></li>
-					<li class="nav-item <%= isMenuActive('/blog')  %>"><a class="nav-link" href="<%= blog_path %>">Blog</a></li>
-					<li class="nav-item <%= isMenuActive('/about')  %>"><a class="nav-link" href="<%= about_path %>">About</a></li>
-				</ul>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<img class="navbar-brand logo" src="<%= asset_path('logo.png') %>">
+				<div class="navbar-collapse collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item <%= is_menu_active('/home') %>"><a class="nav-link" href="<%= home_path %>">Home</a></li>
+						<li class="nav-item <%= is_menu_active('/albums')  %>"><a class="nav-link" href="<%= albums_path %>">Albums</a></li>
+						<li class="nav-item <%= is_menu_active('/blog')  %>"><a class="nav-link" href="<%= blog_path %>">Blog</a></li>
+						<li class="nav-item <%= is_menu_active('/about')  %>"><a class="nav-link" href="<%= about_path %>">About</a></li>
+					</ul>
+					<ul class="navbar-nav ml-auto">
+						<% if !login? %>
+						<button class="btn btn-outline-custom mr-2"><%= link_to "Đăng ký",session_register_path %></button>
+						<button class="btn btn-outline-custom"><%= link_to "Đăng nhập",session_login_path %></button>
+						<% else %>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= session[:user_name] %></a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<%= link_to "Đăng xuất",session_path(session[:user_id]), method: :delete, class: "dropdown-item" %>
+							</div>
+						</li>
+						<% end %>
+					</ul>
+				</div>
 			</div>
-			<ul class="navbar-nav ml-auto">
-			  <button class="btn btn-outline-primary mr-2">Đăng ký</button>
-		      <button class="btn btn-outline-primary">Đăng nhập</button>
-		    </ul>
-		</div>
 		</nav>
 		<div class="breadcrum-panel">
 			<div class="container">
@@ -57,27 +66,27 @@
 						<div class="list-group">
 							<a class="list-group-item" href="#">
 								<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;New feed</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Messenger</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>&nbsp;Event</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Group</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-king" aria-hidden="true"></span>&nbsp;Game</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;List friend</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;Calendar</a>
+								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Messenger</a>
+								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>&nbsp;Event</a>
+								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Group</a>
+								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-king" aria-hidden="true"></span>&nbsp;Game</a>
+								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;List friend</a>
+								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;Calendar</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-10 col-content">
-					<%= yield %>
+					<div class="col-md-10 col-content">
+						<%= yield %>
+					</div>
 				</div>
 			</div>
-		</div>
-		<% else %>
+			<% else %>
 			<%= yield %>
-		<% end %>
-		<footer>
-			<div class="container">
-				<p>Copyright 2017 by Trí &amp; Vũ. All Rights Reserved.</p>
-			</div>
-		</footer>
-	</body>
-</html>
+			<% end %>
+			<footer>
+				<div class="container">
+					<p>Copyright 2017 by Trí &amp; Vũ. All Rights Reserved.</p>
+				</div>
+			</footer>
+		</body>
+	</html>

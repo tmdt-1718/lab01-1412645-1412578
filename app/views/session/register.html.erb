@@ -1,0 +1,15 @@
+<% if !flash[:error].nil? %>
+<div class="alert alert-danger" role="alert">
+  <span><%= flash[:error] %></span>
+</div>
+<% end %>
+<h1>Login</h1>
+<%= form_with scope: :user, url: user_index_path, local: true, method: :post do |form| %>
+	<label>Tên</label>
+	<%= form.text_field :name %>
+	<label>Tên đăng ký</label>
+	<%= form.text_field :username %>
+	<label>Mật khẩu</label>
+	<%= form.password_field :password_hash %>
+	<button type="submit" class="btn btn-primary">Đăng ký</button>
+<% end %>
