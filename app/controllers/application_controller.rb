@@ -10,4 +10,9 @@ class ApplicationController < ActionController::Base
   		redirect_to session_login_path
   	end
   end
+  def no_authorize
+    if !session[:user_id].nil?
+      redirect_to root_path
+    end
+  end
 end

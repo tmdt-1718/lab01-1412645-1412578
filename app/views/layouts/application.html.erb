@@ -23,12 +23,12 @@
 					</ul>
 					<ul class="navbar-nav ml-auto">
 						<% if !login? %>
-						<button class="btn btn-outline-custom mr-2"><%= link_to "Đăng ký",session_register_path %></button>
+						<button class="btn btn-outline-custom mr-lg-2"><%= link_to "Đăng ký",session_register_path %></button>
 						<button class="btn btn-outline-custom"><%= link_to "Đăng nhập",session_login_path %></button>
 						<% else %>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= session[:user_name] %></a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle-o" aria-hidden="true"></i>  <%= session[:user_name] %></a>
+							<div class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdownMenuLink">
 								<%= link_to "Đăng xuất",session_path(session[:user_id]), method: :delete, class: "dropdown-item" %>
 							</div>
 						</li>
@@ -57,36 +57,34 @@
 			<div class="row">
 				<div class="col-md-2 col-leftmenu">
 					<div id="listgroup" class="lmenu-btn-show">
-						More
-						<button class="navbar-toggler" data-toggle="collapse" data-target="#myAddition">
-						<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+						<button class="navbar-toggler navbar-toggler-custom" type="button" data-toggle="collapse" data-target="#myAddition">
+						Show
 						</button>
 					</div>
-					<div class="lmenu navbar-collapse" id="myAddition">
+					<div class="lmenu navbar-collapse collapse show" id="myAddition">
 						<div class="list-group">
-							<a class="list-group-item" href="#">
-								<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;New feed</a>
-								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Messenger</a>
-								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>&nbsp;Event</a>
-								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Group</a>
-								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-king" aria-hidden="true"></span>&nbsp;Game</a>
-								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;List friend</a>
-								<a class="list-group-item" href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;Calendar</a>
-							</div>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;New feed</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Messenger</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>&nbsp;Event</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Group</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-king" aria-hidden="true"></span>&nbsp;Game</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;List friend</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;Calendar</a>
 						</div>
 					</div>
-					<div class="col-md-10 col-content">
-						<%= yield %>
-					</div>
+				</div>
+				<div class="col-md-10 col-content">
+					<%= yield %>
 				</div>
 			</div>
-			<% else %>
-			<%= yield %>
-			<% end %>
-			<footer>
-				<div class="container">
-					<p>Copyright 2017 by Trí &amp; Vũ. All Rights Reserved.</p>
-				</div>
-			</footer>
-		</body>
-	</html>
+		</div>
+		<% else %>
+		<%= yield %>
+		<% end %>
+		<footer>
+			<div class="container">
+				<p>Copyright 2017 by Trí &amp; Vũ. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>

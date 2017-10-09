@@ -1,16 +1,11 @@
 class SessionController < ApplicationController
+	before_action :no_authorize, only: [:login, :create, :register]
+	before_action :authorize, only: [:destroy]
 	def create
-		if !session[:user_id].nil?
-			redirect_to root_path
-			return
-		end
 		session_params = params.require(:session).permit(:username, :password)
 		begin
-			user = User.find_by_username(session_params[:username])
-			if user.nil?
-				raise ActiveRecord::RecordNotFound
-			end
-			if user.password_hash==session_params[:password] then
+			user = User.find_by_username!(session_params[:username])
+			if user.password==session_params[:password] then
 				flash[:succeed] = "Đăng nhập thành công!"
 				session[:user_id] = user.id
 				session[:user_name] = user.name
@@ -27,16 +22,10 @@ class SessionController < ApplicationController
 		end
 	end
 	def destroy
-		if session[:user_id].nil?
-			redirect_to root_path
-			return
-		end
 		session.delete(:user_id)
 		redirect_to root_path
 	end
 	def login
-		if !session[:user_id].nil?
-			redirect_to root_path
-		end
+		
 	end
 end
