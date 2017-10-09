@@ -49,11 +49,7 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 ## Demo
 
 Link ảnh GIF demo ứng dụng:
-
-![Link Gif của nhóm](https://imgur.com/vEjXElm)
-
-Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
-
+https://imgur.com/vEjXElm
 
 ## License
 
