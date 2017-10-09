@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_many :blogs
 	def password
 		@password ||= BCrypt::Password.new(password_hash)
 	end

@@ -18,7 +18,7 @@
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item <%= is_menu_active('/home') %>"><a class="nav-link" href="<%= home_path %>">Home</a></li>
 						<li class="nav-item <%= is_menu_active('/albums')  %>"><a class="nav-link" href="<%= albums_path %>">Albums</a></li>
-						<li class="nav-item <%= is_menu_active('/blog')  %>"><a class="nav-link" href="<%= blog_path %>">Blog</a></li>
+						<li class="nav-item <%= is_menu_active('/blog')  %>"><a class="nav-link" href="<%= blog_index_path %>">Blog</a></li>
 						<li class="nav-item <%= is_menu_active('/about')  %>"><a class="nav-link" href="<%= about_path %>">About</a></li>
 					</ul>
 					<ul class="navbar-nav ml-auto">
@@ -63,13 +63,10 @@
 					</div>
 					<div class="lmenu navbar-collapse collapse show" id="myAddition">
 						<div class="list-group">
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;New feed</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Messenger</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>&nbsp;Event</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Group</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-king" aria-hidden="true"></span>&nbsp;Game</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;List friend</a>
-							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;Calendar</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;Home</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Albums</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>&nbsp;Blog</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;About</a>
 						</div>
 					</div>
 				</div>
