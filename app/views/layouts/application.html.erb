@@ -8,49 +8,62 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 	</head>
 	<body>
-		<nav class="navbar navbar-default navbar-default-custom">
+		<nav class="navbar navbar-dark bg-dark navbar-default-custom navbar-expand-lg">
 			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<img class="navbar-brand" src="<%= asset_path('logo.png') %>"></img>
-				</div>
-				<div class="navbar-collapse-custom collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li class="<%= isMenuActive('/home') %>"><a href="<%= home_path %>">Home</a></li>
-						<li class="<%= isMenuActive('/albums')  %>"><a href="<%= albums_path %>">Albums</a></li>
-						<li class="<%= isMenuActive('/blog')  %>"><a href="<%= blog_path %>">Blog</a></li>
-						<li class="<%= isMenuActive('/about')  %>"><a href="<%= about_path %>">About</a></li>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<img class="navbar-brand logo" src="<%= asset_path('logo.png') %>">
+				<div class="navbar-collapse collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item <%= is_menu_active('/home') %>"><a class="nav-link" href="<%= home_path %>">Home</a></li>
+						<li class="nav-item <%= is_menu_active('/albums')  %>"><a class="nav-link" href="<%= albums_path %>">Albums</a></li>
+						<li class="nav-item <%= is_menu_active('/blog')  %>"><a class="nav-link" href="<%= blog_path %>">Blog</a></li>
+						<li class="nav-item <%= is_menu_active('/about')  %>"><a class="nav-link" href="<%= about_path %>">About</a></li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<ul class="navbar-nav ml-auto">
+						<% if !login? %>
+						<button class="btn btn-outline-custom mr-lg-2"><%= link_to "Đăng ký",session_register_path %></button>
+						<button class="btn btn-outline-custom"><%= link_to "Đăng nhập",session_login_path %></button>
+						<% else %>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle-o" aria-hidden="true"></i>  <%= session[:user_name] %></a>
+							<div class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdownMenuLink">
+								<%= link_to "Đăng xuất",session_path(session[:user_id]), method: :delete, class: "dropdown-item" %>
+							</div>
+						</li>
+						<% end %>
 					</ul>
 				</div>
 			</div>
 		</nav>
+		<div class="breadcrum-panel">
+			<div class="container">
+				<ol class="breadcrumb breadcrumb-custom">
+					<% @breadcums.each_with_index do |item, index| %>
+					<li class="breadcrumb-item breadcrumb-item-custom <%= index==@breadcums.length-1 ? "" : "active" %>">
+						<% if index==@breadcums.length-1 %>
+						<%= item[:title] %>
+						<% else %>
+						<a href="<%= item[:url] %>"><%= item[:title] %></a>
+						<% end %>
+					</li>
+					<% end %>
+				</ol>
+			</div>
+		</div>
+		<% if !@view_options[:homepage] %>
 		<div class="container container-content">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Home</a></li>
-				<li class="breadcrumb-item active">Sample</li>
-			</ol>
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-2 col-leftmenu">
 					<div id="listgroup" class="lmenu-btn-show">
-						More
-						<button class="navbar-toggler" data-toggle="collapse" data-target="#myAddition">
-						<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+						<button class="navbar-toggler navbar-toggler-custom" type="button" data-toggle="collapse" data-target="#myAddition">
+						Show
 						</button>
 					</div>
-					<div class="lmenu collapse navbar-collapse" id="myAddition">
+					<div class="lmenu navbar-collapse collapse show" id="myAddition">
 						<div class="list-group">
-							<a class="list-group-item" href="#">
-								<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;
-								New feed
-							</a>
+							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;New feed</a>
 							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Messenger</a>
 							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>&nbsp;Event</a>
 							<a class="list-group-item" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Group</a>
@@ -60,11 +73,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-10 col-content">
 					<%= yield %>
 				</div>
 			</div>
 		</div>
+		<% else %>
+		<%= yield %>
+		<% end %>
 		<footer>
 			<div class="container">
 				<p>Copyright 2017 by Trí &amp; Vũ. All Rights Reserved.</p>

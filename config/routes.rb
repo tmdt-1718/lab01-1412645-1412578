@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   resources :albums
   resources :picture
-  
+  resources :session, only: [:create, :destroy]
+  resources :user, only: [:create]
+  get "session/login", to: "session#login", as: "session_login"
+  get "session/register", to: "session#register", as: "session_register"
   get 'home' => 'home#index'
 
 

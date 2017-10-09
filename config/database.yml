@@ -84,6 +84,7 @@ development:
 #
 production:
   <<: *default
-  database: webapp_production
-  username: webapp
+  host: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV['WEBAPP_DATABASE_NAME'] %>
+  username: <%= ENV['WEBAPP_DATABASE_USERNAME'] %>
   password: <%= ENV['WEBAPP_DATABASE_PASSWORD'] %>
