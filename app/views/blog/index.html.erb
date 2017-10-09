@@ -1,4 +1,4 @@
-
+<% if login? %>
 <div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
@@ -19,7 +19,7 @@
 	</div>
 	<div class="col-md-1"></div>
 </div>
-
+<% end %>
 <div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
@@ -28,7 +28,7 @@
 				<div class="avatarpost">
 					<img src="<%= asset_path('1412645.jpg') %>" alt="avatar's poster">
 				</div>
-				<div class="namepost">Tên tài khoản</div>
+				<div class="namepost"><%= blog.user.name %></div>
 				<div class="content_post more" id="new">
 					<%=blog.text_content%>
 				</div>
@@ -41,6 +41,3 @@
 	</div>
 	<div class="col-md-1"></div>
 </div>
-
-
-

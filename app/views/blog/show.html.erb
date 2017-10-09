@@ -6,7 +6,7 @@
 			<div class="avatarpost">
 				<img src="<%= asset_path('1412645.jpg') %>" alt="avatar's poster">
 			</div>
-			<div class="namepost">Tên tài khoản</div>
+			<div class="namepost"><%=@blog.user.name %></div>
 			<div class="content_post" id="new">
 				<%=@blog.text_content%>
 			</div>
